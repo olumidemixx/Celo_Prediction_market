@@ -1,6 +1,10 @@
 # Celo Prediction Markets
 
-A decentralized prediction markets platform on Celo Sepolia testnet where users bet on cryptocurrency price movements (BTC, ETH, SOL, BNB). Features automated 5-minute rounds with 4-minute entry periods, RedStone oracle integration, and a modern Next.js frontend with RainbowKit wallet support.
+A decentralized prediction markets platform on Celo Sepolia testnet where users bet on cryptocurrency price movements (BTC, ETH, SOL, BNB). Features automated 5-minute rounds with 4-minute entry periods, RedStone oracle integration, and a modern Next.js frontend with RainbowKit wallet support. 
+
+This Youtube Video shows how it works: https://youtu.be/ikqvZwaZsOg
+
+The Project is Deployed on:https://celo-prediction-market.onrender.com
 
 ![Celo Prediction Markets](https://img.shields.io/badge/Celo-Sepolia-fbcc5c?style=for-the-badge)
 ![Solidity](https://img.shields.io/badge/Solidity-0.8.19-363636?style=for-the-badge&logo=solidity)
@@ -11,7 +15,7 @@ A decentralized prediction markets platform on Celo Sepolia testnet where users 
 - **4 Active Markets**: BTC, ETH, SOL, BNB prediction markets
 - **Automated Rounds**: New rounds every 5 minutes with 4-minute entry windows
 - **RedStone Oracle**: Real-time price feeds for accurate settlements
-- **Pro-Rata Payouts**: Winners split the entire pot proportionally
+- **Pro-Rata Payouts**: Winners split the entire pot proportionally, winners get thier extra profit as payout, alongside thier original stake.
 - **1% Platform Fee**: Minimal fee on all entries
 - **Modern UI**: Glassmorphism design with real-time countdowns
 - **Wallet Integration**: RainbowKit with Celo Sepolia support
