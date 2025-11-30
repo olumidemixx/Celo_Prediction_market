@@ -1,0 +1,37 @@
+{
+  "name": "celo-prediction-markets",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Predict cryptocurrency prices with CELO bets",
+  "type": "module",
+  "scripts": {
+    "start": "npm run start:all",
+    "start:all": "concurrently --names \"FRONTEND,AUTO-SETTLE,ORACLE\" --prefix-colors \"cyan,green,magenta\" \"npm run dev\" \"npm run auto-settle\" \"npm run update-oracle\"",
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "npx hardhat test",
+    "lint": "cd frontend && npm run lint",
+    "format": "prettier --write \"**/*.{js,jsx,json,sol,md}\"",
+    "deploy": "npx hardhat run --network celoSepolia scripts/deploy.js",
+    "generate-abi": "npx hardhat compile && node scripts/export-abi.js",
+    "initialize-markets": "node initialize-markets.cjs",
+    "auto-settle": "npx hardhat run auto-settle-service.cjs --network celoSepolia",
+    "update-oracle": "npx hardhat run update-oracle-prices.cjs --network celoSepolia"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.6",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "chai": "^4.3.10",
+    "concurrently": "^9.2.1",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.13.0",
+    "hardhat": "^2.22.4",
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0"
+  }
+}
