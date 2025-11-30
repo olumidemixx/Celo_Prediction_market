@@ -44,7 +44,7 @@ Create `.env` in the root directory:
 
 ```env
 PRIVATE_KEY=your_private_key_here
-RPC_URL_CELO_SEPOLIA=https://alfajores-forno.celo-testnet.org
+RPC_URL_CELO_SEPOLIA=https://sepolia-forno.celo-testnet.org
 ```
 
 Create `frontend/.env.local`:
