@@ -7,6 +7,8 @@
   "scripts": {
     "start": "npm run start:all",
     "start:all": "concurrently --names \"FRONTEND,AUTO-SETTLE,ORACLE\" --prefix-colors \"cyan,green,magenta\" \"npm run dev\" \"npm run auto-settle\" \"npm run update-oracle\"",
+    "start:prod": "concurrently --names \"FRONTEND,AUTO-SETTLE,ORACLE\" --prefix-colors \"cyan,green,magenta\" \"npm run start:frontend\" \"npm run auto-settle\" \"npm run update-oracle\"",
+    "start:frontend": "cd frontend && npm start",
     "dev": "npm run dev --prefix frontend",
     "build": "npm run build:frontend",
     "build:frontend": "cd frontend && npm run build",
